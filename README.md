@@ -1,6 +1,13 @@
 # GWC_Project
 Github Repo for GWC project 12
 
+Hello, hello
+
+git add (FILEname/path)
+git commit -m ""
+
+git push
+
 ---
 First tips:
 - Can use any IDE/terminal/methods if you're familiar with github/remote repos, I prefer VSCode as my main IDE and to clone repos.
