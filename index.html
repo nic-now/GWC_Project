@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8" />
     <title> Homepage </title> <!-- This is the tab name-->
-    <link rel="stylesheet" href="style.css" /> <!--Connect to CSS styling-->
+    <link rel="stylesheet" href="format.css" /> <!--Connect to CSS styling-->
 
 </head>
 
@@ -33,15 +33,29 @@
         <!--Example of div -->
         <div class="nav-bar">
 
-            <div id="homepage" style="text-align: center;">
+            <!--.nav-list {
+                    list-style: none;
+                    display: flex; /* make horizontal */
+                    justify-content: center; /* center horizontally */
+                    gap: 20px; /* space between buttons */
+                    padding: 0;
+                    }-->
 
-                <ul>
+            <div id="homepage" style="text-align: center;"> <!--TODO CSS: style-->
+
+                <ul class="nav-list">
+                    <li>
                     <button id="complementary-strands">></button>
                     <p>Complementary Pairing</p>
+                    </li>
+                    <li>
                     <button id="composition-calculator">></button>
                     <p>Composition Calculator</p>
+                    </li>
+                    <li>
                     <button id="thermal-denaturation">></button>
                     <p>Thermal Denaturation</p>
+                    </li>
                 </ul>
             </div>
 
@@ -51,7 +65,7 @@
 
      <!-- Footer -->
     <footer>
-        <p> GWC Fall 2025 Project | Team 12 </p>
+        <h4> GWC Fall 2025 Project | Team 12 <h4>
     </footer>
 
     <!--Javascrip connection -->
