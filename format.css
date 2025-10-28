@@ -15,7 +15,7 @@
     --color-bg: #ffffff;
     --color-text: #111827;
     --color-muted: #6b7280;
-    --color-primary: #2563eb;
+    --color-primary: #2864e6a9;
     --color-primary-contrast: #ffffff;
     --color-border: #e5e7eb;
     --radius: 8px;
@@ -69,8 +69,8 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-bg: #0b1220;
-      --color-text: #e5e7eb;
+      --color-bg: #ffffff;
+      --color-text: #0e0f0f;
       --color-muted: #9ca3af;
       --color-border: #1f2937;
       --color-primary: #60a5fa;
