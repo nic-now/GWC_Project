@@ -16,8 +16,8 @@
 <!-- All HTML docs should have a head and body -->
 <head>
     <meta charset="UTF-8" />
-    <title> Title </title> <!-- This is the tab name-->
-    <link rel="stylesheet" href="style.css" /> <!--Connect to CSS styling-->
+    <title> Thermal Denaturation </title> <!-- This is the tab name-->
+    <link rel="stylesheet" href="../format.css" /> <!--Connect to CSS styling-->
 
 </head>
 
@@ -25,25 +25,64 @@
 <body>
      <!-- Header -->
     <header>
-
+        <button id="home_button"> Home </button>
     </header>
 
      <!-- Main content -->
     <main>
-        <p>Paragraph here</p> <!--Paragraph-->
+        <p>.</p> <!--Paragraph-->
 
         <!--Example of div -->
         <div class="example">
-            <h3>Example Title</h3>
-            <p>This can be a tool or anything to display</p>
-        
+            <h1>Thermal Denaturation</h1>
+            <p>Enter starting sequence</p>
         </div>
+
+        <!--.input_thermal .input-group {
+                display: flex;
+                flex-direction: column; /* input vertically */
+                gap: 10px; /* space between */
+                align-items: flex-start; /* keep aligned left */
+                }   
+
+                /* button appear next to last input */
+            .input_thermal .input-group button {
+                align-self: flex-end; /* button to right */
+                margin-top: 5px;
+                }-->
+        <div class = "input_thermal">
+            <div class="input_group"> <!--TODO CSS: input vertically-->
+                <label for="sequence"> </label>
+                <input
+                    type="text"
+                    id="sequence"
+                    name="sequence"
+                    placeholder="Sequence 1"
+                    required
+                    minlength="1"
+                    maxlength="32"
+                    size="20" />
+
+                <label for="sequence2"> </label>
+                <input
+                    type="text"
+                    id="sequence2"
+                    name="sequence2"
+                    placeholder="Sequence 2"
+                    required
+                    minlength="1"
+                    maxlength="32"
+                    size="20" />
+                <button id="enter_button_thermal"> > </button>
+            </div>                
+        </div>
+
     </main>
     
 
      <!-- Footer -->
     <footer>
-        <p> GWC Fall 2025 Project | Team 12 </p>
+        <h4> GWC Fall 2025 Project | Team 12 </h4>
     </footer>
 
     <!--Javascrip connection -->
