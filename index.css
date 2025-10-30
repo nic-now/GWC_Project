@@ -1,0 +1,38 @@
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+/* .nav-list button {
+  padding: 10px 15px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color:rgb(239, 232, 167);
+  color:rgb(19, 143, 19); 
+  cursor: pointer;
+  transition: transform 0.2s;
+} */
+
+.nav-list button:hover {
+  transform: scale(1.05);
+}
+
+/* Labels (<p>)
+.nav-list p {
+  margin-top: 0.5rem;
+  color: rgb(239, 232, 167);
+  font-weight: 600;
+} */
+
+/* .nav-list p {
+  color: inherit;
+  font-weight: 600;
+} */
+
+/* .nav-list li {
+  color: rgb(239, 232, 167); 
+} 
+*/
