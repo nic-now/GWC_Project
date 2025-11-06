@@ -20,8 +20,6 @@ document.getElementById('enter_button_thermal').addEventListener('click', functi
   const percent2 = calculateATPercent(sequence2);
 
   outputElement.textContent =
-    `The percent of A and T in Sequence 1 is: ${percent1.toFixed(1)} | The percent of A and T in Sequence 2 is: ${percent2.toFixed(1)} | ` +
-    (percent1 === percent2
       ? 'Based on their perecnt of A and T, both sequences will denature at the same time.'
       : (percent1 > percent2 ? 'Sequence 1' : 'Sequence 2') + ' will denature first');
 });
