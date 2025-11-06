@@ -9,7 +9,7 @@ document.getElementById('enter_button_thermal').addEventListener('click', functi
 
   if (sequence1.length !== sequence2.length || !isValidDNA(sequence1) || !isValidDNA(sequence2)) {
     outputElement.textContent =
-      'Both sequences must match in length under 32 characters and contain only A, T, G, C.';
+      'Both sequences must match in length under 35 characters and contain only A, T, G, C.';
     return;
   }
 
@@ -20,6 +20,7 @@ document.getElementById('enter_button_thermal').addEventListener('click', functi
   const percent2 = calculateATPercent(sequence2);
 
   outputElement.textContent =
-      ? 'Based on their perecnt of A and T, both sequences will denature at the same time.'
+    (percent1 === percent2
+      ? 'The sequences will denature at the same time.'
       : (percent1 > percent2 ? 'Sequence 1' : 'Sequence 2') + ' will denature first');
 });
