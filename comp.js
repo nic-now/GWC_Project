@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 if (btnToRNA) {
     btnToRNA.addEventListener('click', () => {
-        if (!output.textContent) return; // nothing to toggle
+        if (!output.textContent) return;
     output.textContent = output.textContent.replace(/T/g, 'U');
         });
     }
@@ -50,5 +50,6 @@ if (btnToDNA) {
     }
 
 });
+
 
 
