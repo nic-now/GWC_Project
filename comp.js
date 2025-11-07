@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (valid) {
       output.textContent = getComplement(raw)
     } else {
-      output.textContent = "Invalid sequence entered. Enter a sequence up to 23 characters with A, T, G, or C."
+      output.textContent = "Invalid sequence entered. Enter a sequence up to 32 characters with A, T, G, or C."
     }
   });
   
@@ -50,3 +50,4 @@ if (btnToDNA) {
     }
 
 });
+
