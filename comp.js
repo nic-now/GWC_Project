@@ -15,7 +15,7 @@ function getComplement(seq) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const btn    = document.getElementById("enter_button_pairs"); 
-  const input = document.getElementById("seqInput")
+  const input = document.getElementById("sequence")
   const output = document.getElementById("output")
   const btnToRNA = document.getElementById('toRNA'); // toggle to RNA
   const btnToDNA = document.getElementById('toDNA'); // toggle to DNA
@@ -50,4 +50,5 @@ if (btnToDNA) {
     }
 
 });
+
 
