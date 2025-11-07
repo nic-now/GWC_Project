@@ -52,7 +52,7 @@ document.getElementById('enter_button_thermal').addEventListener('click', functi
 
   if (sequence1.length !== sequence2.length || !isValidDNA(sequence1) || !isValidDNA(sequence2)) {
     outputElement.textContent =
-      'Both sequences must match in length under 35 characters and contain only A, T, G, C.';
+      'Both sequences must match in length, be under 32 characters, and contain only A, T, G, C.';
     return;
   }
 
@@ -78,7 +78,7 @@ function getComplement(seq) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const btn      = document.getElementById("enter_button_pairs");
-  const input    = document.getElementById("seqInput");
+  const input    = document.getElementById("sequence");
   const output   = document.getElementById("output");
   const btnToRNA = document.getElementById("toRNA");
   const btnToDNA = document.getElementById("toDNA");
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
       output.textContent = getComplement(raw);
     } else {
       output.textContent =
-        "Invalid sequence entered. Enter a sequence up to 23 characters with A, T, G, or C.";
+        "Invalid sequence entered. Enter a sequence up to 32 characters with A, T, G, or C.";
     }
   });
 
