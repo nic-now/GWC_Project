@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #082F50;        
+}
+
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+   color: #8FAF8C;
+   font-weight: 700; 
+}
+
+.nav-list h4 {
+  color: #FFFCCC;
+}
+
+.nav-list {
+  font-family: Helvetica, Arial, sans-serif; 
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.nav-list button {
+  padding: 8px 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color:#FFFCCC;
+  color: #3F7652; 
+  font-size: 1rem;
+  font-weight: 900;  
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.nav-list button:hover {
+  transform: scale(1.05);
+}
+
+/* Labels (<p>)
+.nav-list p {
+  margin-top: 0.5rem;
+  color: rgb(239, 232, 167);
+  font-weight: 600;
+} */
+
+.nav-list p {
+  color: inherit;
+  font-weight: 600;
+}
+
+/* .nav-list li {
+  color: rgb(239, 232, 167); 
+} 
+*/
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  color: #e1b13a
+}
+
+main {
+  margin-top: 2rem;
+}
+
+
+.example h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;     
+  color: #8FAF8C;        
+  margin: 0;             
+}
+
+.example p {
+  font-family: Helvetica;
+  color: #FFFCCC;
+}
+
+#sequence, #sequence2 {
+  border: 1px solid #FFFCCC;
+  background: #ffffff80;
+  border-radius: 4px;
+  color: #3F7652; 
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#sequence:hover, #sequence2:hover {
+  background: #FFFFFF;
+  border-color: #3F7652;
+}
+
+#sequence:focus, #sequence2:focus {
+  background: transparent;
+  border-color: #3F7652;
+  outline: none;    
+  color: #FFFFFF;          
+}
+
+#enter_button_pairs, #enter_button_calculator, #enter_button_thermal {
+  background: #FFFCCC;    
+  color: #3F7652;           
+  border: none;
+  border-radius: 4px;
+  font-size: .8rem;
+  font-weight: 700;  
+}
+
+
+#toRNA,
+#toDNA {
+  background: #FFFCCC;      
+  color: #3F7652;           
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#output {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #FFFFFF;       
+}
+
+
+#home_button {
+  position: absolute;
+  left: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 0.35rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #FFFCCC;
+  color: #3F7652;
+  font-weight: 600;
+  cursor: pointer;
+}
