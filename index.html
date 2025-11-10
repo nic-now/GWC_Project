@@ -16,47 +16,67 @@
     <meta charset="UTF-8" />
     <title> Homepage </title> <!-- This is the tab name-->
     <link rel="stylesheet" href="format.css" /> <!--Connect to CSS styling-->
-    <link rel="stylesheet" href="index.css" />
 </head>
 
 
 <body>
-     <!-- Header -->
-    <header>
-        <h1 style="text-align: center;">Base Pair Decoder</h1>
-        <header class="topbar"></header>
+     <!-- Header -->    
+    <header class="topbar">
+      <button id="home_button">Home</button>
     </header>
 
-    
+     <!-- Main content -->
+    <main>
 
         <!--Example of div -->
-        <div class="nav-bar">
+        <div class="example">
+            <h1 style="text-align: center;">Complementary Pairs</h1>
+            <p style="text-align: center;">Starting Sequence</p>
+        </div>
 
-     
+         <div style="text-align: center;" class = "input_pairs">
+            <div class="input_group"> <!--TODO CSS: input vertically-->
+                <label for="seqInput"> </label>
+                <input
+                    type="text"
+                    id="sequence"
+                    name="sequence"
+                
+                    required
+                    minlength="1"
+                    maxlength="32"
+                    size="20" />
 
-            <div id="homepage" style="text-align: center;"> <!--TODO CSS: style-->
+                <button id="enter_button_pairs"> Enter </button>
+                
+            </div>                
+        </div>
 
-             
+        <div class="rna_dna">
+  <span class="toggle-label">Change complementary sequence to:</span>
 
-                     <ul class="nav-list">
-                                        <li>
-                                        <a href="complementary-strand.html" class="nav-btn">➜</a>
-                                
-                                        <h4>Complementary<br>Pairing</h4>
-                                        </li>
-                                        <li>
-                                        <a href="composition-calculator.html" class="nav-btn">➜</a>
-                                        <h4>Composition<br>Calculator</h4>
-                                        </li>
-                                        <li>
-                                        <a href="thermal-denaturation.html" class="nav-btn">➜</a>
-                                        <h4>Thermal<br>Denaturation</h4>
-                                    </li>
-                                </ul>
-            </div>
-        </main>
+  <!-- keep the two buttons in their own row -->
+  <div class="toggle-row">
+    <button id="toRNA">RNA</button>
+    <button id="toDNA">DNA</button>
+  </div>
+</div>
+        <!-- <div style="text-align:end;" class = "rna_dna"> 
+            <button id="toRNA"> RNA </button>
+            <button id="toDNA"> DNA </button>
+            <span class="toggle-label">Change output to</span>
+        </div> -->
+        
+        
+
+        <!--output-->
+        <div id="output" style="margin-top: 1rem; padding: 1rem; text-align: center;" >
+        </div>
+        
+    </main>
     
 
+  
      <!-- Footer -->
      <footer class="bottombar">
       <h4>GWC Fall 2025 Project | Team 12</h4>
