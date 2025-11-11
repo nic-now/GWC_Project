@@ -1,5 +1,5 @@
 
-/* I dont think this is working as a single js for the whole site yet but ill get to it next */
+/* DELETE  */
 
 
 
