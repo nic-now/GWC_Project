@@ -5,11 +5,11 @@ document.getElementById('enter_button_thermal').addEventListener('click', functi
   const sequence2 = document.getElementById('sequence2').value.toUpperCase();
   const outputElement = document.getElementById('output');
 
-  const isValidDNA = str => /^[ATGC]{1,23}$/.test(str);
+  const isValidDNA = str => /^[ATGC]{1,32}$/.test(str);
 
   if (sequence1.length !== sequence2.length || !isValidDNA(sequence1) || !isValidDNA(sequence2)) {
     outputElement.textContent =
-      'Both sequences must match in length under 35 characters and contain only A, T, G, C.';
+      'Both sequences must match in length, be under 32 characters, and contain only A, T, G, C.';
     return;
   }
 
