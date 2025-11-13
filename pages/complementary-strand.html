@@ -1,14 +1,3 @@
-<!-- complementary-strand.html: this is the complementary strand generator page -->
-
-
-
-<!-- This is how to write a comment in HTML
-    You can refer to the GWC workshop for an example of html website 
-    Also, if using VSCode, would recommend adding the extension: 
-    Live Preview (by Microsoft) -->
-
-
-
 <!-- This is necessary to have in all html docs -->
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +6,7 @@
 <head>
     <meta charset="UTF-8" />
     <title> Complementary Pairs </title> <!-- This is the tab name-->
-    <link rel="stylesheet" href="../format.css" /> <!--Connect to CSS styling-->
+    <link rel="stylesheet" href="format.css" />
 
 </head>
 
@@ -25,7 +14,7 @@
 <body>
      <!-- Header -->    
     <header class="topbar">
-      <a href="../index.html" class="home-link">Home</a>
+      <a href="index.html" class="home-link">Home</a>
     </header>
 
      <!-- Main content -->
@@ -54,10 +43,16 @@
                 
             </div>                
         </div>
-        <div style="text-align:end;" class = "rna_dna"> 
-            <button id="toRNA"> RNA </button>
-            <button id="toDNA"> DNA </button>
-        </div>
+           <div class="rna_dna">
+  <span class="toggle-label">Change sequence output to:</span>
+
+
+  <div class="toggle-row">
+    <button id="toRNA">RNA</button>
+    <button id="toDNA">DNA</button>
+  </div>
+</div>
+
         
         
 
@@ -75,6 +70,6 @@
     </footer>
 
     <!--Javascrip connection -->
-    <script src="script.js"></script>
+    <script src="complement.js"></script>
 </body>
 </html>
