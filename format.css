@@ -1,22 +1,48 @@
-/*working file */
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;                 
+  background: #1168B1;          
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;           
+}
+
+.home-link {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  background: #FFFCCC;       
+  color: #3F7652;      
+  font-weight: 700;
+  border-radius: 8px;
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
 
 
 body {
   display: flex;
   flex-direction: column;
-  background: #082F50;        
+  background: #9DD2FF;    
 }
+
+
+
+
 
 
 header h1 {
   font-family: 'Poppins', sans-serif;
    color: #8FAF8C;
+   font-size: 3rem;
    font-weight: 700; 
+   padding-top: 3rem;
 }
 
 .nav-list h4 {
@@ -28,18 +54,17 @@ header h1 {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 80px;
   padding: 0;
 }
 
 .nav-list button {
-  padding: 8px 15px;
+  padding: 6px 15px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background-color:#FFFCCC;
   color: #3F7652; 
   font-size: 1rem;
-  font-weight: 900;  
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -48,27 +73,31 @@ header h1 {
   transform: scale(1.05);
 }
 
-/* Labels (<p>)
-.nav-list p {
-  margin-top: 0.5rem;
-  color: rgb(239, 232, 167);
-  font-weight: 600;
-} */
 
-.nav-list p {
-  color: inherit;
-  font-weight: 600;
+.nav-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;               
+  height: 32px;
+  background: #FFFCCC;       
+  color: #3F7652;            
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;   
+  transition: transform 0.2s, background 0.2s;
+  line-height: 1.3;
 }
 
-/* .nav-list li {
-  color: rgb(239, 232, 167); 
-} 
-*/
-
-footer {
-  font-family: 'Poppins', sans-serif;
-  color: #e1b13a
+.nav-btn:hover,
+.nav-btn:focus-visible {
+  transform: scale(1.05);
 }
+
+
+
+
+
 
 main {
   margin-top: 2rem;
@@ -80,11 +109,15 @@ main {
   font-weight: 700;     
   color: #8FAF8C;        
   margin: 0;             
+  padding-top: 3rem;
+  font-size: 3rem;
 }
 
 .example p {
   font-family: Helvetica;
   color: #FFFCCC;
+  font-weight: 600;
+  margin-bottom: .1rem;
 }
 
 #sequence, #sequence2 {
@@ -93,6 +126,8 @@ main {
   border-radius: 4px;
   color: #3F7652; 
   transition: background 0.2s ease, border-color 0.2s ease;
+  text-transform: uppercase; 
+  letter-spacing: 0.2rem; 
 }
 
 #sequence:hover, #sequence2:hover {
@@ -105,6 +140,13 @@ main {
   border-color: #3F7652;
   outline: none;    
   color: #FFFFFF;          
+}
+
+.input_group {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;      
+  gap: 0.5rem;              
 }
 
 #enter_button_pairs, #enter_button_calculator, #enter_button_thermal {
@@ -128,9 +170,46 @@ main {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+
+
+
+
+
+.rna_dna {
+  display: flex;
+  flex-direction: column;      
+  align-items: center;      
+  gap: 0.4rem;                
+  padding-right: 1rem;   
+  width: max-content;    
+  margin-left: auto;
+  margin-top: 3rem;
+  margin-right: 7rem;
+}
+
+
+.toggle-row {
+  display: flex;
+  gap: 0.5rem;                
+}
+
+
+.toggle-label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #FFFCCC;  
+  font-weight: 500;  
+}
+
+
+
+
+
 #output {
   font-family: Helvetica, Arial, sans-serif;
-  color: #FFFFFF;       
+  color: #FFFFFF;  
+  font-weight: 700;
+  letter-spacing: 0.2rem; 
 }
 
 
@@ -145,5 +224,205 @@ main {
   color: #3F7652;
   font-weight: 600;
   cursor: pointer;
+}
+
+
+
+.bottombar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background: #1168B1;
+  display: flex;
+  align-items: center;          
+  padding: 0 1rem;              
+  color: #9DD2FF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  box-sizing: border-box;      
+}
+
+
+
+
+.sources-link {
+  margin-left: auto;                 
+  font-family: 'Poppins', sans-serif;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.sources-link:hover,
+.sources-link:focus-visible {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+
+.enzymes-wrapper {
+  margin-left: 1rem;            
+  margin-top: 1rem;             
+}
+
+
+.enzymes-link {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #FFF;               
+  text-decoration: none;
+  text-align: center;        
+  padding: 2rem 4rem;
+}
+
+
+.enzymes-link:hover,
+.enzymes-link:focus-visible {
+  text-decoration: underline;
+}
+
+
+/* new stuff*/
+
+.enzymes-grid{
+  display:grid;
+  grid-template-columns:repeat(5,140px);
+  gap: .2rem .5rem; 
+  justify-content:center; 
+  justify-items:center;
+  margin-top:5rem;
+}
+
+.enzymes-grid h4 {
+  margin:0rem 0 0;
+  font:600 1.6rem/1.2 Helvetica, Arial, sans-serif;
+  color:#fff;
+  text-align:center;
+  padding-bottom: 5rem;
+}
+
+.enzymes-grid a{
+  color:inherit;text-decoration:none;
+}
+
+
+.enzymes-grid img, .enzyme-img {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+.enzymes-grid img[alt="Gyrase"]     { height: 160px; }
+
+.enzymes-grid img[alt="Ligase"]  {height: 160px; transform-origin: bottom center;transform: scale(0.85);    
+}
+
+.enzymes-grid img[alt="Helicase"]   { height: 150px; }
+
+.enzymes-grid img[alt="Telomerase"] {  transform-origin: bottom center; height: 150px; transform: scale(0.95)}
+
+
+
+.enzymes-grid a:hover h4,
+.enzymes-grid a:focus-visible h4{
+  text-decoration:underline;
+}
+
+
+.enzymes-grid>:nth-child(1){grid-column:1;}
+.enzymes-grid>:nth-child(2)
+{grid-column:3;transform:translateY(1rem);}
+.enzymes-grid>:nth-child(3){grid-column:5;}
+.enzymes-grid>:nth-child(4){grid-column:2;}
+.enzymes-grid>:nth-child(5){grid-column:4;}
+
+
+.enzyme-center{
+font-family: Helvetica, Arial, sans-serif;
+font-size: 2rem;
+font-weight: 600;
+color: #FFF;
+}
+
+.enzyme-center h4{
+  margin-top: 0.2rem;
+}
+
+.enzyme-detail{
+  display:flex;     
+  gap: 5rem;  
+  color: #FFF;       
+  margin-top: 0rem;
+  margin-bottom: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.enzyme-structure img{
+  margin-top: 10rem;
+  max-width: 18rem;           
+  height:auto;  
+  flex:0 0 20rem;            
+  border:6px solid #1168B1;
+}
+.enzyme-text     {
+  font-family: Arial, Helvetica, sans-serif; 
+  color: #3F7652; 
+  margin-top: 2rem;
+  max-width: 40rem; 
+  padding: 2rem 1.5rem;
+
+  }  
+
+
+
+/* Sources Page  */
+
+.source-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.source-list {
+  width: 70%;
+  max-width: 800px;
+  background: #ffffff80;
+  border: 2px solid #1168B1;
+  border-radius: 6px;
+  padding: 2rem 1.5rem;
+  font: 1rem/1.8 Helvetica, Arial, sans-serif;
+  color: #1168B1;
+  text-align: left;
+}
+
+.source-note {
+  text-align: center;
+  color: #FFF;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 2rem;
+} 
+
+
+
+.enzyme-blurb{
+  display:inline-block;             
+  background:#ffffff80;             
+  border:2px solid #1168B1;         
+  border-radius:6px;
+  padding:1rem 1.5rem;
+  max-width:40rem;                  
+}
+
+
+.enzyme-blurb p{
+  margin:0 0 1rem;
+}
+
+.enzyme-blurb p:last-child{
+  margin-bottom:0;        
 }
 
