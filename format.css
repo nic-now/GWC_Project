@@ -316,7 +316,7 @@ main {
   object-fit: contain;
 }
 
-.enzymes-grid img[alt="Gyrase"]     { height: 160px; }
+.enzymes-grid img[alt="Topoisomerase"]     { height: 160px; }
 
 .enzymes-grid img[alt="Ligase"]  {height: 160px; transform-origin: bottom center;transform: scale(0.85);    
 }
@@ -425,4 +425,5 @@ color: #FFF;
 .enzyme-blurb p:last-child{
   margin-bottom:0;        
 }
+
 
