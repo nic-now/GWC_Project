@@ -403,7 +403,7 @@ color: #FFF;
   text-align: center;
   color: #FFF;
   font-family: Helvetica, Arial, sans-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 } 
 
 .citation {
@@ -431,6 +431,7 @@ color: #FFF;
 .enzyme-blurb p:last-child{
   margin-bottom:0;        
 }
+
 
 
 
