@@ -406,6 +406,12 @@ color: #FFF;
   margin-bottom: 2rem;
 } 
 
+.citation {
+  display: block;
+  margin-left: 0;
+  padding-left: 15px;
+  text-indent: -15px;
+}
 
 
 .enzyme-blurb{
@@ -425,5 +431,6 @@ color: #FFF;
 .enzyme-blurb p:last-child{
   margin-bottom:0;        
 }
+
 
 
