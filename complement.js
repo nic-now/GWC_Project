@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault()
 
     const raw = (input.value || "").toUpperCase().slice(0, 32)
-    const valid = /^[ATGCU]{1,32}$/.test(raw) && !(raw.includes('T') && raw.includes('U'));
+    const valid = /^[ATGCU]{1,32}$/.test(raw) && !(raw.includes('T') && raw.includes('U')) && (raw.length <= 32);
 
     if (valid) {
       output.textContent = getComplement(raw)

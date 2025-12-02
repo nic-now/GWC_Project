@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500&display=swap');
 
 
 
@@ -8,7 +9,7 @@
   left: 0;
   width: 100%;
   height: 48px;                 
-  background: #1168B1;          
+  background: #4ea3ea;          
   display: flex;
   align-items: center;
   padding-left: 1rem;           
@@ -39,7 +40,7 @@ body {
 
 header h1 {
   font-family: 'Poppins', sans-serif;
-   color: #8FAF8C;
+   color: #f3f7f3;
    font-size: 3rem;
    font-weight: 700; 
    padding-top: 3rem;
@@ -107,7 +108,7 @@ main {
 .main-body h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;     
-  color: #8FAF8C;        
+  color: #ffffff;        
   margin: 0;             
   padding-top: 3rem;
   font-size: 3rem;
@@ -234,11 +235,11 @@ main {
   left: 0;
   width: 100%;
   height: 48px;
-  background: #1168B1;
+  background: #4ea3ea;
   display: flex;
   align-items: center;          
   padding: 0 1rem;              
-  color: #9DD2FF;
+  color: #fdfdfd;
   font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
   box-sizing: border-box;      
@@ -280,7 +281,7 @@ main {
 }
 
 
-.enzymes-link:hover,
+.enzymes-link:hover h4,
 .enzymes-link:focus-visible {
   text-decoration: underline;
 }
@@ -288,58 +289,71 @@ main {
 
 /* new stuff*/
 
-.enzymes-grid{
-  display:grid;
-  grid-template-columns:repeat(5,140px);
-  gap: .2rem .5rem; 
-  justify-content:center; 
-  justify-items:center;
-  margin-top:5rem;
+
+/* HORIZONTAL SCROLL, NO SCROLLBAR, HOVER ANIMATION */
+.enzymes-grid {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  margin-top: 5rem;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;     /* Firefox */
 }
 
+.enzymes-grid::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari */
+}
+
+/* Each enzyme box */
+.enzymes-grid > * {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+/* Headings */
 .enzymes-grid h4 {
-  margin:0rem 0 0;
-  font:600 1.6rem/1.2 Helvetica, Arial, sans-serif;
-  color:#fff;
-  text-align:center;
-  padding-bottom: 5rem;
+  font: 600 1.6rem/1.2 Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
 }
 
-.enzymes-grid a{
-  color:inherit;text-decoration:none;
-}
-
-
-.enzymes-grid img, .enzyme-img {
+/* Image default size */
+.enzymes-grid img {
   height: 180px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.enzymes-grid img[alt="Topoisomerase"]     { height: 160px; }
-
-.enzymes-grid img[alt="Ligase"]  {height: 160px; transform-origin: bottom center;transform: scale(0.85);    
+/* Hover grow effect */
+.enzymes-grid img:hover {
+  transform: scale(1.10) !important;
 }
 
-.enzymes-grid img[alt="Helicase"]   { height: 150px; }
+/* Maintain your specific image adjustments */
+.enzymes-grid img[alt="Topoisomerase"] { height: 160px; transform: scale(0.85); transform-origin: bottom center; }
+.enzymes-grid img[alt="Ligase"] { height: 160px; transform: scale(0.85); transform-origin: bottom center; }
+.enzymes-grid img[alt="Helicase"] { height: 150px; transform: scale(0.85); transform-origin: bottom center; }
+.enzymes-grid img[alt="Telomerase"] { height: 150px; transform: scale(0.95); transform-origin: bottom center; }
+.enzymes-grid img[alt="Polymerase"] { height: 180px; transform: scale(0.95); transform-origin: bottom center; }
 
-.enzymes-grid img[alt="Telomerase"] {  transform-origin: bottom center; height: 150px; transform: scale(0.95)}
-
-
-
+/* Link hover underline stays the same */
 .enzymes-grid a:hover h4,
-.enzymes-grid a:focus-visible h4{
-  text-decoration:underline;
+.enzymes-grid a:focus-visible h4 {
+  text-decoration: underline;
 }
 
-
-.enzymes-grid>:nth-child(1){grid-column:1;}
-.enzymes-grid>:nth-child(2)
-{grid-column:3;transform:translateY(1rem);}
-.enzymes-grid>:nth-child(3){grid-column:5;}
-.enzymes-grid>:nth-child(4){grid-column:2;}
-.enzymes-grid>:nth-child(5){grid-column:4;}
-
+.enzyme-img {
+  max-height: 16rem;
+  width: auto;
+  object-fit: contain;
+  margin-top: 2rem;
+}
 
 .enzyme-center{
 font-family: Helvetica, Arial, sans-serif;
@@ -369,7 +383,7 @@ color: #FFF;
   border:6px solid #1168B1;
 }
 .enzyme-text     {
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: "Inter",  Helvetica, Arial,sans-serif; 
   color: #3F7652; 
   margin-top: 2rem;
   max-width: 40rem; 

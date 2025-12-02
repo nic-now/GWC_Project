@@ -1,0 +1,105 @@
+<!-- gene-sequence.html : sequence fetcher page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+    <link rel="icon" type="image/png" href="dna.png">
+    <meta charset="UTF-8" />
+    <title>Gene Sequence Tool</title> <!-- Tab name -->
+    <link rel="stylesheet" href="format.css" /> <!-- CSS connection -->
+
+    <style>
+        /* output box animation */
+        #output {
+            background: #ffffffcc;
+            border: 2px solid #1168B1;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            animation: fadeIn 0.5s ease-in-out;
+            text-align: left;
+            color: #1168B1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Center input layout similar to other tools */
+        .input_group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .fetch-button {
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            background: #1168B1;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .fetch-button:hover {
+            background: #0d4e86;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header class="topbar">
+        <a href="index.html" class="home-link">Home</a>
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+        <!-- main-body section -->
+        <div class="main-body">
+            <h1 style="text-align: center;">Gene Sequence Explorer</h1>
+            <p style="text-align: center;">Fetch human gene sequences from Ensembl</p>
+        </div>
+
+        <!-- Input area -->
+        <div class="input_pairs" style="text-align:center;">
+            <div class="input_group">
+                <label for="geneInput"></label>
+
+                <input
+                    type="text"
+                    id="geneInput"
+                    name="geneInput"
+                    placeholder="Example: TP53, BRCA1, EGFR"
+                    required
+                    minlength="2"
+                    size="25" />
+
+                <button id="toolsBtn" class="fetch-button">Get Sequence </button>
+            </div>
+        </div>
+
+        <!-- Output box -->
+        <div id="output"></div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bottombar">
+        <h4>GWC Fall 2025 Project | Team 12</h4>
+        <a href="sources.html" class="sources-link">Sources</a>
+    </footer>
+
+    <!-- Javascript connection -->
+    <script src="sequence-tools.js"></script>
+</body>
+</html>
